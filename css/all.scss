@@ -75,6 +75,7 @@ header {
     flex: 0 0 50%;
     >ul {
       display: flex;
+      justify-content:flex-end;
       li {
         position: relative;
         a {
