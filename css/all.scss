@@ -64,18 +64,67 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  .hambur {
+    display: none;
+  }
+  @media (max-width: 768px) {
+    padding: 20px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: #ede8ed;
+    .hambur {
+      position: relative;
+      width: 30px;
+      display: block;
+      cursor: pointer;
+      height: 30px;
+      &:before {
+        content: '';
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        position: absolute;
+        height: 2px;
+        background-color: #000;
+        width: 20px;
+        box-shadow: 0 -8px 0 #000, 0 8px 0 #000;
+      }
+    }
+  }
   .logo {
     h1 {
       font-size: 24px;
       font-weight: 400;
       letter-spacing: 1.2px;
+      @media (max-width: 768px) {
+        font-size: 20px;
+      }
     }
   }
   .menu {
     flex: 0 0 50%;
+    @media (max-width: 768px) {
+      position: fixed;
+      height: 100vh;
+      width: 60%;
+      top: 0;
+      right: -600px;
+      padding-top: 84px;
+      background: #ede8ed;
+      z-index: -1;
+      transition: right .3s;
+    }
+    &.show {
+      right: 0;
+    }
     >ul {
       display: flex;
       justify-content:flex-end;
+      @media (max-width: 768px) {
+        display: block;
+      }
       li {
         position: relative;
         a {
@@ -103,6 +152,14 @@ header {
             width: 20px;
             padding-right: 10px;
           }
+          @media (max-width: 768px) {
+            padding: 15px 20px !important;
+            text-align: left;
+            justify-content: flex-start;
+            svg {
+              margin-right: 10px;
+            }
+          }
         }
         .dropdown {
           position: absolute;
@@ -114,7 +171,15 @@ header {
           padding: 10px 0;
           z-index: -100;
           opacity: 0;
-          transition: opacity .3s;
+          transition: opacity, height .3s;
+          @media (max-width: 768px) {
+            position: static;
+            display: block;
+            height: 0px;
+            overflow: hidden;
+            opacity: 1;
+            border: 0;
+          }
           &.h {
             bottom: -250px;
           }
@@ -127,6 +192,11 @@ header {
             margin-bottom: 20px;
             justify-content: center;
             padding: 0 20px;
+            @media (max-width: 768px) {
+              margin: 0;
+              justify-content: flex-start;
+              padding: 15px 60px !important;
+            }
           }
         }
       }
@@ -136,23 +206,28 @@ header {
 .func:hover .dropdown {
   opacity: 1;
   z-index: 1;
+  height: 200px;
 }
 .reslut:hover .dropdown {
   opacity: 1;
   z-index: 1;
+  height: 300px;
 }
 .wrap {
   max-width: 1200px;
   margin: 0 auto;
 }
 section {
-  padding-top: 50px;
+  padding-top: 80px;
   ul {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     margin-right: -15px;
     margin-left: -15px;
+    @media (max-width: 768px) {
+      margin: 0;
+    }
   }
   li {
     width: 33.3333%;
@@ -161,6 +236,9 @@ section {
     color: #fff;
     position: relative;
     cursor: pointer;
+    @media (max-width: 768px) {
+      width: 100%;
+    }
     &:before {
       position: absolute;
       content: '';

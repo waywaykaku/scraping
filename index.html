@@ -12,6 +12,7 @@
     <div class="logo">
       <h1>生活指數指數調查</h1>
     </div>
+    <div class="hambur"></div>
     <div class="menu">
       <ul>
         <li>
@@ -46,6 +47,7 @@
         </li>
       </ul>
     </div>
+
   </header>
   <section>
     <div class="wrap">
@@ -86,5 +88,16 @@
   <footer>
 
   </footer>
+  <script>
+    let humber = document.querySelector('.hambur')
+    humber.addEventListener('click', function(e) {
+      let menu = document.querySelector('.menu')
+      if (menu.className.indexOf('show') > -1) {
+        menu.classList.remove('show')
+      } else {
+        menu.classList.add('show')
+      }
+    })
+  </script>
 </body>
 </html>
