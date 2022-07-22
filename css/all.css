@@ -235,7 +235,7 @@ header .menu > ul li .dropdown {
   background: #ede8ed;
   border: 1px solid #ccc;
   border-top: 0;
-  bottom: -165px;
+  bottom: -205px;
   padding: 10px 0;
   z-index: -100;
   opacity: 0;
@@ -255,7 +255,7 @@ header .menu > ul li .dropdown {
 }
 
 header .menu > ul li .dropdown.h {
-  bottom: -250px;
+  bottom: -300px;
 }
 
 header .menu > ul li .dropdown:hover {
