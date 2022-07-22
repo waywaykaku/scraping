@@ -167,7 +167,7 @@ header {
           background: #ede8ed;
           border: 1px solid #ccc;
           border-top: 0;
-          bottom: -205px;
+          bottom: -300px;
           padding: 10px 0;
           z-index: -100;
           opacity: 0;
@@ -206,7 +206,7 @@ header {
 .func:hover .dropdown {
   opacity: 1;
   z-index: 1;
-  height: 200px;
+  height: 300px;
 }
 .reslut:hover .dropdown {
   opacity: 1;
@@ -217,7 +217,7 @@ header {
   max-width: 1200px;
   margin: 0 auto;
 }
-section {
+.home {
   padding-top: 80px;
   ul {
     display: flex;
@@ -236,6 +236,9 @@ section {
     color: #fff;
     position: relative;
     cursor: pointer;
+    a {
+      color: #fff;
+    }
     @media (max-width: 768px) {
       width: 100%;
     }
@@ -277,6 +280,84 @@ section {
       }
       &.bg-green {
         background-color: rgb(117, 203, 168);
+      }
+    }
+  }
+}
+
+.food {
+  @media (max-width: 768px) {
+    padding-top: 64px;
+  }
+  h2 {
+    padding: 64px 0;
+    color: #fff;
+    font-weight: bold;
+    letter-spacing: 3px;
+    font-size: 48px;
+    text-align: center;
+    background: rgb(255, 97, 97);
+    margin-bottom: 60px;
+  }
+  .food-menu {
+    display: flex;
+    margin-bottom: 50px;
+    @media (max-width: 768px) {
+      justify-content: center;
+    }
+    li {
+      margin-right: 20px;
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+    a {
+      display: block;
+      padding: 10px 60px;
+      background: rgba(255, 97, 97, .8);
+      color: #fff;
+      border-radius: 10px;
+      transition: .5s;
+      &:hover, &.active {
+        background: rgba(255, 97, 97, 1);
+      }
+    }
+  }
+  .food-list {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -5px;
+    margin-left: -5px;
+    display: none;
+    @media (max-width: 768px) {
+      margin: 0;
+    }
+    &.show {
+      display: flex;
+    }
+    li {
+      flex: 0 0 25%;
+      padding: 0 5px;
+      margin-bottom: 10px;
+      @media (max-width: 768px) {
+        flex: 0 0 50%;
+      }
+      a {
+        border: 2px solid #000;
+        display: block;
+        padding: 120px 60px;
+        text-align: center;
+        font-size: 24px;
+        color: inherit;
+        letter-spacing: 2px;
+        transition: .5s;
+        @media (max-width: 768px) {
+          padding: 60px 30px;
+        }
+        &:hover {
+          background-color: #000;
+          color: #fff;
+        }
       }
     }
   }

@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>運用網路爬文之物價指數調查</title>
+  <title>指數調查 | 食物</title>
   <link rel="stylesheet" href="./css/all.css" class="css">
 </head>
 <body>
@@ -38,7 +38,7 @@
             結論
           </a>
           <ul class="dropdown h">
-            <li><a href="./index.html">食物結論</a></li>
+            <li><a href="./food.html">食物結論</a></li>
             <li><a href="./index.html">衣服結論</a></li>
             <li><a href="./index.html">住宿結論</a></li>
             <li><a href="./index.html">教育結論</a></li>
@@ -50,49 +50,60 @@
         </li>
       </ul>
     </div>
-
   </header>
-  <section class="home">
-    <div class="wrap">
-      <ul>
-        <li>
-          <a href="./food.html">
-            <div class="content bg-orange">
-              <h2>食物</h2>
-              <p>過去35天的資料,詳細研究台灣食物的物價指數。</p>
-            </div>
-          </a>
-        </li>
-        <li>
-          <div class="content bg-red">
-            <h2>衣物</h2>
-            <p>過去35天的資料,詳細研究台灣食物的物價指數。</p>
-          </div>
-        </li>
-        <li>
-          <div class="content bg-blue">
-            <h2>住宿</h2>
-            <p>過去35天的資料,詳細研究台灣食物的物價指數。</p>
-          </div>
-        </li>
-        <li>
-          <div class="content bg-green">
-            <h2>教育</h2>
-            <p>過去35天的資料,詳細研究台灣食物的物價指數。</p>
-          </div>
-        </li>
-        <li>
-          <div class="content bg-orange">
-            <h2>玩樂</h2>
-            <p>過去35天的資料,詳細研究台灣食物的物價指數。</p>
-          </div>
-        </li>
-      </ul>
-    </div>
+  <section class="food">
+      <h2>食物類別</h2>
+      <div class="wrap">
+        <ul class="food-menu">
+          <li>
+            <a class="active" href="./food.html">食材</a>
+          </li>
+          <li>
+            <a href="./food.html">餐廳</a>
+          </li>
+        </ul>
+        <ul class="food-list show" data-category="食材">
+          <li>
+            <a href="./food.html">雞蛋</a>
+          </li>
+          <li>
+            <a href="./food.html">蘋果</a>
+          </li>
+          <li>
+            <a href="./food.html">柳丁</a>
+          </li>
+          <li>
+            <a href="./food.html">牛肉</a>
+          </li>
+          <li>
+            <a href="./food.html">豬肉</a>
+          </li>
+          <li>
+            <a href="./food.html">羊肉</a>
+          </li>
+          <li>
+            <a href="./food.html">牛奶</a>
+          </li>
+          <li>
+            <a href="./food.html">麵粉</a>
+          </li>
+        </ul>
+        <ul class="food-list" data-category="餐廳">
+          <li>
+            <a href="./food.html">鼎泰豐</a>
+          </li>
+          <li>
+            <a href="./food.html">麥當勞</a>
+          </li>
+          <li>
+            <a href="./food.html">肯德基</a>
+          </li>
+          <li>
+            <a href="./food.html">春水堂</a>
+          </li>
+        </ul>
+      </div>
   </section>
-  <footer>
-
-  </footer>
   <script>
     let humber = document.querySelector('.hambur')
     humber.addEventListener('click', function(e) {
@@ -102,6 +113,32 @@
       } else {
         menu.classList.add('show')
       }
+    })
+
+
+
+    const foodList = document.querySelectorAll('.food-list')
+    const menuBtn = document.querySelectorAll('.food-menu')
+    menuBtn.forEach(item => {
+      item.addEventListener('click', function(e) {
+        e.preventDefault()
+        if (e.target.nodeName === 'A') {
+          const category = e.target.textContent
+          document.querySelectorAll('.food-menu a').forEach(a => {
+            a.classList.remove('active')
+          })
+          e.target.classList.add('active')
+          foodList.forEach(food => {
+            const foodCategory = food.getAttribute('data-category')
+            if (foodCategory == category) {
+              food.classList.add('show')
+            } else {
+              food.classList.remove('show')
+            }
+          })
+
+        }
+      })
     })
   </script>
 </body>

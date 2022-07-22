@@ -235,7 +235,7 @@ header .menu > ul li .dropdown {
   background: #ede8ed;
   border: 1px solid #ccc;
   border-top: 0;
-  bottom: -205px;
+  bottom: -300px;
   padding: 10px 0;
   z-index: -100;
   opacity: 0;
@@ -285,7 +285,7 @@ header .menu > ul li .dropdown a {
 .func:hover .dropdown {
   opacity: 1;
   z-index: 1;
-  height: 200px;
+  height: 300px;
 }
 
 .reslut:hover .dropdown {
@@ -299,11 +299,11 @@ header .menu > ul li .dropdown a {
   margin: 0 auto;
 }
 
-section {
+.home {
   padding-top: 80px;
 }
 
-section ul {
+.home ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -317,12 +317,12 @@ section ul {
 }
 
 @media (max-width: 768px) {
-  section ul {
+  .home ul {
     margin: 0;
   }
 }
 
-section li {
+.home li {
   width: 33.3333%;
   padding: 0 10px;
   margin-bottom: 20px;
@@ -331,13 +331,17 @@ section li {
   cursor: pointer;
 }
 
+.home li a {
+  color: #fff;
+}
+
 @media (max-width: 768px) {
-  section li {
+  .home li {
     width: 100%;
   }
 }
 
-section li:before {
+.home li:before {
   position: absolute;
   content: '';
   bottom: 40px;
@@ -349,7 +353,7 @@ section li:before {
   background: url(https://static.wixstatic.com/media/5bfb6f_c2ae26a3c5004bca9ea2b860a535f4ab~mv2.png/v1/fill/w_50,h_14,al_c,lg_1,q_85,enc_auto/5bfb6f_c2ae26a3c5004bca9ea2b860a535f4ab~mv2.png) no-repeat;
 }
 
-section li .content {
+.home li .content {
   padding: 40px 16px;
   padding-top: 80px;
   text-align: center;
@@ -357,32 +361,148 @@ section li .content {
   transition: .3s;
 }
 
-section li .content h2 {
+.home li .content h2 {
   font-size: 32px;
   letter-spacing: 2px;
   margin-bottom: 30px;
 }
 
-section li .content p {
+.home li .content p {
   padding: 20px 40px 40px 40px;
   line-height: 1.5;
   letter-spacing: 2px;
   margin-bottom: 60px;
 }
 
-section li .content.bg-orange {
+.home li .content.bg-orange {
   background-color: #f2bf5e;
 }
 
-section li .content.bg-red {
+.home li .content.bg-red {
   background-color: #ff6161;
 }
 
-section li .content.bg-blue {
+.home li .content.bg-blue {
   background-color: #536eb7;
 }
 
-section li .content.bg-green {
+.home li .content.bg-green {
   background-color: #75cba8;
+}
+
+@media (max-width: 768px) {
+  .food {
+    padding-top: 64px;
+  }
+}
+
+.food h2 {
+  padding: 64px 0;
+  color: #fff;
+  font-weight: bold;
+  letter-spacing: 3px;
+  font-size: 48px;
+  text-align: center;
+  background: #ff6161;
+  margin-bottom: 60px;
+}
+
+.food .food-menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 50px;
+}
+
+@media (max-width: 768px) {
+  .food .food-menu {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+.food .food-menu li {
+  margin-right: 20px;
+}
+
+.food .food-menu li:last-child {
+  margin-right: 0;
+}
+
+.food .food-menu a {
+  display: block;
+  padding: 10px 60px;
+  background: rgba(255, 97, 97, 0.8);
+  color: #fff;
+  border-radius: 10px;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+.food .food-menu a:hover, .food .food-menu a.active {
+  background: #ff6161;
+}
+
+.food .food-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-right: -5px;
+  margin-left: -5px;
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .food .food-list {
+    margin: 0;
+  }
+}
+
+.food .food-list.show {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.food .food-list li {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 25%;
+          flex: 0 0 25%;
+  padding: 0 5px;
+  margin-bottom: 10px;
+}
+
+@media (max-width: 768px) {
+  .food .food-list li {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 50%;
+            flex: 0 0 50%;
+  }
+}
+
+.food .food-list li a {
+  border: 2px solid #000;
+  display: block;
+  padding: 120px 60px;
+  text-align: center;
+  font-size: 24px;
+  color: inherit;
+  letter-spacing: 2px;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+@media (max-width: 768px) {
+  .food .food-list li a {
+    padding: 60px 30px;
+  }
+}
+
+.food .food-list li a:hover {
+  background-color: #000;
+  color: #fff;
 }
 /*# sourceMappingURL=all.css.map */
