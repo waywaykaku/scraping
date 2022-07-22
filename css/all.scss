@@ -1,0 +1,204 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+	line-height: 1;
+  background-color: #ede8ed;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+body {
+  font-family: Microsoft JhengHei;
+  line-height: 1.2;
+}
+img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  vertical-align: middle;
+}
+a {
+  text-decoration: none;
+}
+header {
+  padding: 40px 60px;
+  box-shadow: 0px 3px 10px lighten(#ccc, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  .logo {
+    h1 {
+      font-size: 24px;
+      font-weight: 400;
+      letter-spacing: 1.2px;
+    }
+  }
+  .menu {
+    flex: 0 0 50%;
+    >ul {
+      display: flex;
+      li {
+        position: relative;
+        a {
+          color: inherit;
+          display: block;
+          padding: 0 40px;
+          font-size: 18px;
+          transition: .3s;
+          svg {
+            transition: .3s;
+          }
+          &:hover {
+            color: #d882e3;
+            svg {
+              fill: #d882e3;
+            }
+          }
+        }
+        > a {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding: 0 40px;
+          svg {
+            width: 20px;
+            padding-right: 10px;
+          }
+        }
+        .dropdown {
+          position: absolute;
+          width: 100%;
+          background: #ede8ed;
+          border: 1px solid #ccc;
+          border-top: 0;
+          bottom: -165px;
+          padding: 10px 0;
+          z-index: -100;
+          opacity: 0;
+          transition: opacity .3s;
+          &.h {
+            bottom: -250px;
+          }
+          &:hover {
+            opacity: 1;
+            z-index: 1;
+          }
+          a {
+            margin-top: 20px;
+            margin-bottom: 20px;
+            justify-content: center;
+            padding: 0 20px;
+          }
+        }
+      }
+    }
+  }
+}
+.func:hover .dropdown {
+  opacity: 1;
+  z-index: 1;
+}
+.reslut:hover .dropdown {
+  opacity: 1;
+  z-index: 1;
+}
+.wrap {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+section {
+  padding-top: 50px;
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-right: -15px;
+    margin-left: -15px;
+  }
+  li {
+    width: 33.3333%;
+    padding: 0 10px;
+    margin-bottom: 20px;
+    color: #fff;
+    position: relative;
+    cursor: pointer;
+    &:before {
+      position: absolute;
+      content: '';
+      bottom: 40px;
+      right: 0;
+      left: 0;
+      margin: auto;
+      height: 50px;
+      width: 50px;
+      background: url(https://static.wixstatic.com/media/5bfb6f_c2ae26a3c5004bca9ea2b860a535f4ab~mv2.png/v1/fill/w_50,h_14,al_c,lg_1,q_85,enc_auto/5bfb6f_c2ae26a3c5004bca9ea2b860a535f4ab~mv2.png) no-repeat;
+    }
+    .content {
+      padding: 40px 16px;
+      padding-top: 80px;
+      text-align: center;
+      transition: .3s;
+      h2 {
+        font-size: 32px;
+        letter-spacing: 2px;
+        margin-bottom: 30px;
+      }
+      p {
+        padding: 20px 40px 40px 40px;
+        line-height: 1.5;
+        letter-spacing:2px;
+        margin-bottom: 60px;
+      }
+      &.bg-orange {
+        background-color: rgb(242, 191, 94);
+      }
+      &.bg-red {
+        background-color: rgb(255, 97, 97);
+      }
+      &.bg-blue {
+        background-color: rgb(83, 110, 183);
+      }
+      &.bg-green {
+        background-color: rgb(117, 203, 168);
+      }
+    }
+  }
+}
